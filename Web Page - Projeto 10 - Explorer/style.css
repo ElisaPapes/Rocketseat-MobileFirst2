@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 6.25%;
+
+  --font1: 'Staatliches', cursive;
+  --font2: 'Palanquin';
+
+  --color1: hsla(218, 17%, 62%, 1);
+  --color3: #FFFFFF;
+  --color4: hsla(233, 100%, 97%, 1);
+  --color5: hsla(275, 18%, 79%, 1);
+  --color6: #23053A;
+  --color7: hsla(312, 91%, 96%, 1);
+}
+
+body {
+  font-family: var(--font1);
+  background: var(--color4);
+}
+
+h1{
+  font-size: 40rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 0px 1px 1px var(--color6);
+}
+
+h1, span{
+  font-family: var(--font1);
+  text-transform: uppercase;
+  letter-spacing: 5rem;
+  line-height: 34rem;
+}
+
+header{
+  background: var(--color1);
+  display: grid;
+  place-items: center;
+  /* Place itens pode usar dentro do display:grid */
+}
+
+#logo{
+  padding: 32rem 0;
+}
+
+header h1{
+  background: var(--color5);
+  margin-bottom: 29rem;
+  padding: 8rem;
+  width: 100%;
+  text-align: center;
+}
+
+main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 18rem 32rem 60rem;
+}
+
+.text{
+  font-family: var(--font2);
+  font-weight: normal;
+  font-size: 14rem;
+  line-height: 20rem;
+
+  color: var(--color6);
+
+  width: 315rem;
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.cards{
+  display: grid;
+  gap: 32rem;
+  margin-top: 50rem;
+}
+
+.cards .card{
+  position: relative;
+  width: 320rem;
+  height: auto;
+
+}
+
+.cards .card span{
+  font-size: 20rem;
+  letter-spacing: 2rem;
+
+  color: var(--color6);
+  background: var(--color7);
+
+  position: absolute;
+  top: 16rem;
+  right: 16rem;
+
+  width: 112rem;
+  text-align: center;
+  border-radius: 20rem;
+
+  animation: topdown 800ms 450ms backwards;
+}
+
+.cards .card img{
+  width: 100%;
+  border-radius: 2rem;
+
+  animation: downtop 700ms 350ms backwards;
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    translate: translateY(20px);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    translate: translateY(0px);
+  }
+}
